@@ -1,0 +1,31 @@
+
+canvas {
+  cursor: pointer;
+  transform: rotate(45deg);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.child-check-active {
+  display: block;
+}
+
+.child-check-hidden {
+  position: absolute;
+  display: none;
+}
+
+/* Customize the label (the container) */
+.container {
+  cursor: pointer;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover {
+  background-color: #ccc;
+}
+
+.fieldset {
+  width: 50%;
+}
