@@ -1,61 +1,30 @@
-
-
-:root {
-  --space-xxs: 4px;
-  --space-xs: 8px;
-  --space-sm: 16px;
-  --space: 24px; 
-  --space-md: 32px;
-  --space-lg: 48px;
-  --space-xlg: 64px;
-
-  --white: #fff;
-  --background: #F25C54;
-  --gray-line: #dcdde0;
-  --text: #f1f381;
-  --text-highlight: #b3b9ff;
-  --title: #F7B267;
-  --red: #e83f5b;
-  --green: #4cd62b;
-  --blue: #5965e0;
-  --blue-dark: #4953b8;
-  --blue-twitter: #2aa9e0;
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
 }
-
-body {
-  background: var(--background);
-  color: var(--text);
+li {
+  list-style-type: none;
+  border-left: 2px solid #000;
+  margin-left: 1em;
 }
-
-* ul li {
-  list-style: none;
-  background-color: blue;
-  width: 350px;
-  display: flex;
+li input {
+  padding-left: 2em;
+  margin-left: 0.8rem;
+  position: relative;
 }
-
-ul li::after {
-  content: "😴";
-  justify-content: flex-end;
-  /* position: absolute; */
-  /* display: fle
-  x; */
-  /* right: 10px; */
-  /* transform: translatey(-50%); */
-  /* top: 50%; */
+li input::before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: -15px;
+  bottom: 50%;
+  width: 0.75em;
+  border: 2px solid #000;
+  border-top: 0 none transparent;
+  border-right: 0 none transparent;
 }
-
-ul li:hover::after {
-  content: "🙂";
-}
-
-.container {
-  cursor: pointer;
-  /* border: solid 1px var(--gray-lighter);
-  border-radius: 4px; */
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover {
-  background-color: #ccc;
+ul > li:last-child {
+  border-left: 2px solid transparent;
 }
