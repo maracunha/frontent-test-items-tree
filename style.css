@@ -1,4 +1,12 @@
+
+#list {
+  width: 380px;
+  background: #eee;
+  font-family: 'Oswald', sans-serif;
+}
+
 ul {
+  display: flex;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -6,9 +14,46 @@ ul {
 }
 li {
   list-style-type: none;
-  border-left: 2px solid #000;
+  border-left: 2px solid #aaa;
   margin-left: 1em;
 }
+
+li:nth-child(odd) {
+  background-color: #ddd;
+}
+
+li li:nth-child(odd) {
+  background-color: #eee;
+}
+li li:nth-child(even) {
+  background-color: #ddd;
+}
+
+ul li::after {
+content: "😴";
+cursor: pointer;
+position: absolute;
+font-size: 14px;
+right: 0.5rem;
+}
+
+
+ul li::before {
+  content: "😎";
+  cursor: pointer;
+  position: absolute;
+  font-size: 14px;
+  right: 0.5rem;
+  }
+
+ul li:hover::after {
+  content: "🙂";
+  cursor: pointer;
+  position: absolute;
+  font-size: 14px;
+  right: 0.5rem;
+}
+
 li input {
   padding-left: 2em;
   margin-left: 0.8rem;
@@ -21,10 +66,15 @@ li input::before {
   left: -15px;
   bottom: 50%;
   width: 0.75em;
-  border: 2px solid #000;
+  border: 2px solid #aaa;
   border-top: 0 none transparent;
   border-right: 0 none transparent;
 }
+
 ul > li:last-child {
   border-left: 2px solid transparent;
+}
+
+ul li:hover {
+  background-color: rgb(218, 194, 91);
 }
