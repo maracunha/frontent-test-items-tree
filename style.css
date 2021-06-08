@@ -1,8 +1,21 @@
 
+:root {
+  --background: #eee;
+  --gray-line: #dcdde0;
+  --black: #444;
+  --grey: #aaa;
+  --text: #5965e0;
+  --text-highlight: #b3b9ff;
+}
+
 #list {
-  width: 380px;
-  background: #eee;
+  width: 440px;
+  background: var(--background);
   font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  color: var(--text)
 }
 
 ul {
@@ -14,19 +27,19 @@ ul {
 }
 li {
   list-style-type: none;
-  border-left: 2px solid #aaa;
+  border-left: 2px solid var(--black);
   margin-left: 1em;
 }
 
 li:nth-child(odd) {
-  background-color: #ddd;
+  background-color: var(--gray-line);
 }
 
 li li:nth-child(odd) {
-  background-color: #ddd;
+  background-color: var(--background);
 }
 li li:nth-child(even) {
-  background-color: #ddd;
+  background-color: var(--gray-line);
 }
 
 ul li::after {
@@ -59,6 +72,7 @@ li input {
   margin-left: 0.8rem;
   position: relative;
 }
+
 li input::before {
   content:'';
   position: absolute;
@@ -66,15 +80,17 @@ li input::before {
   left: -15px;
   bottom: 50%;
   width: 0.75em;
-  border: 2px solid #aaa;
+  border: 2px solid var(--black);
   border-top: 0 none transparent;
   border-right: 0 none transparent;
 }
+
 
 ul > li:last-child {
   border-left: 2px solid transparent;
 }
 
 ul li:hover {
-  background-color: rgb(218, 194, 91);
+  background-color: var(--text-highlight);
+  /* background-color: rgb(218, 194, 91); */
 }
