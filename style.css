@@ -23,7 +23,7 @@ li:nth-child(odd) {
 }
 
 li li:nth-child(odd) {
-  background-color: #eee;
+  background-color: #ddd;
 }
 li li:nth-child(even) {
   background-color: #ddd;
