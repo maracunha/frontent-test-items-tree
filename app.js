@@ -34,16 +34,14 @@ import data from './api.js';
     style.display = style.display === 'none' ? 'block' : 'none'
   }
   
-  
   // source: https://css-tricks.com/indeterminate-checkboxes/
   //  helper function to create nodeArrays (not collections)
-  const nodeArray = (selector, parent=document) => [].slice.call(parent.querySelectorAll(selector));
+  function nodeArray(selector, parent = document){
+    return [ ...parent.querySelectorAll(selector) ]
+  }
 
   addEventListener('change', e => {
-    console.log({ e })
     let check = e.target;
-
-    console.log({ check })
     
     //  check/unchek children (includes check itself)
     const children = nodeArray('input', check.parentNode);
@@ -55,7 +53,6 @@ import data from './api.js';
       //  find parent and sibling checkboxes (quick'n'dirty)
       const parent   = (check.closest(['ul']).parentNode).querySelector('input');
       const siblings = nodeArray('input', parent.closest('li').querySelector(['ul']));
-      console.log({ siblings })
       
       //  get checked state of siblings
       //  are every or some siblings checked (using Boolean as test function) 
@@ -74,10 +71,8 @@ import data from './api.js';
   })
   
   addEventListener('click', function(event) {
-    console.log('clicked')
     if(event.target.className.indexOf('label') != -1) {
       toggleView(event.target);
     }
-    
   })
 })()
