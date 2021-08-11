@@ -1,0 +1,19 @@
+{
+    "name": "frontent-test-items-tree",
+    "version": "1.0.0",
+    "description": "Test I have been made for a job interview",
+    "main": "index.html",
+    "scripts": {
+      "dev": "npx lite-server"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/maracunha/frontent-test-items-tree.git"
+    },
+    "author": "Renan Marangon",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/maracunha/frontent-test-items-tree/issues"
+    },
+    "homepage": "https://github.com/maracunha/frontent-test-items-tree#readme"
+  }
